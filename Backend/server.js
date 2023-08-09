@@ -7,11 +7,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 const PORT = 5003;
-const MongoDb = process.env.DB
-console.log(MongoDb)
 const connectToMongoose = async(params) => {
    try {
-    await mongoose.connect("mongodb://localhost:27017/taskDB")
+    await mongoose.connect(process.env.DB)
    }
    catch(err){
     console.log(err)
