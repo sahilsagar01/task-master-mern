@@ -10,7 +10,7 @@ function Home(){
 
     const updateItem = async (id, dataId) =>{
         try{
-            const api = `http://localhost:5003/patch/${dataId}`;
+            const api = `http://3.26.240.6:5003/patch/${dataId}`;
             await axios.patch(api,{
                 status: "🟢completed"
             })
@@ -22,7 +22,7 @@ function Home(){
     }
     const deleteItem = async(id, dataId) =>{
         try{
-            const api = `http://localhost:5003/delete/${dataId}`;
+            const api = `http://3.26.240.6:5003/delete/${dataId}`;
             await axios.delete(api);
             setAllTasks(pV => {
                 return pV.filter((item , index) => {
@@ -37,7 +37,7 @@ function Home(){
     useEffect(() => {
         const fatchTasks = async () => {
           try {
-            const api = `http://localhost:5003`;
+            const api = `http://3.26.240.6:5003`;
             const Tasks = await axios.get(api);
             setAllTasks(Tasks.data);
           } catch (err) {

@@ -8,7 +8,7 @@ function Task(props) {
 
     const handleUpdate = async() => {
       try{
-        const allData = await axios.get("http://localhost:5003");
+        const allData = await axios.get("http://3.26.240.6:5003");
         const dbId = allData.data[props.id]._id
         props.onupdate(props.id, dbId);
       }
