@@ -1,0 +1,116 @@
+
+.IntroImg{
+  width: 280px;
+  margin: 3rem auto auto 1rem;
+  border-radius: 100px;
+  border-left: 10px solid green;
+}
+.headingPeragraph{
+  
+  font-size: 2rem;
+  font-weight: 400;
+}
+.header-p-cont{
+  margin: auto 3rem auto 1rem;
+}
+.header-p-cont span{
+  color: rgb(106, 64, 212);
+  font-weight: 600;
+}
+.left-cont{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 2rem;
+}
+/* input Form------------------------------------- */
+.create-note {
+  position: relative;
+  width: 370px;
+  margin: 60px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+@media (max-width: 767px) {
+  
+  .create-note {
+    width: 90%;
+    margin: 60px auto 20px auto;
+  }
+  
+}
+.create-note input,
+.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #048d56;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+/* task section----------------------------- */
+
+.all-tasks h1{
+  text-align: center;
+}
+.task {
+  background: #cde990;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 300px;
+  margin: 16px;
+  float: left;
+}
+@media (max-width: 767px) {
+  
+  .task {
+    float: none;
+    width: 80%;
+    margin: 60px auto 20px auto;
+  }
+  
+}
+
+.task h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  text-align: left;
+}
+.task p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.task button {
+  position: relative;
+  float: right;
+  margin-right: 2px;
+  color: #7AA874;
+  border: none;
+  /* width: 36px;
+  height: 36px; */
+  cursor: pointer;
+  outline: none;
+  background-color: #cde990;
+}
+/* footer */
