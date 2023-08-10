@@ -12,7 +12,7 @@ const {setAllTasks} = props
 
   const addNewItem = async(newTask) => {
     try{
-      const api = "http://3.26.240.6:5003/post"
+      const api = "http://3.26.215.205:5003/post"
       await axios.post(api,{
       title: newTask.title,
       discription: newTask.discription,
