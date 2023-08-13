@@ -12,7 +12,7 @@ const {setAllTasks} = props
 
   const addNewItem = async(newTask) => {
     try{
-      const api = "http://13.239.136.155:5003/post"
+      const api = "https://mern-task-master.onrender.com:5003/post"
       await axios.post(api,{
       title: newTask.title,
       discription: newTask.discription,
