@@ -8,7 +8,7 @@ function Task(props) {
 
     const handleUpdate = async() => {
       try{
-        const allData = await axios.get("https://mern-task-master.onrender.com:5003");
+        const allData = await axios.get("https://mern-task-master.onrender.com");
         const dbId = allData.data[props.id]._id
         props.onupdate(props.id, dbId);
       }
