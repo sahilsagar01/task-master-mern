@@ -2,6 +2,7 @@
 import React from 'react'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import DeleteIcon from '@mui/icons-material/Delete';
+
 import axios from 'axios';
 
 function Task(props) {
@@ -24,9 +25,9 @@ const handlclick = async() => {
     <div className="task">
       <h1>{props.title}</h1>
       <p>{props.description}</p>
-      <button onClick={handlclick} ><DeleteIcon /></button>
+      <button className='taskDelete' onClick={handlclick} ><DeleteIcon /></button>
       <span>{props.status}</span>
-      <button onClick={handleUpdate} ><CheckCircleIcon /></button>
+      <button className='taskComp' onClick={handleUpdate} ><CheckCircleIcon /></button>
     </div>
   )
 }

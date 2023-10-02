@@ -6,6 +6,8 @@ import axios from "axios";
 function Home(){
     const [allTasks, setAllTasks] = useState([]);
     const [action, setAction] = useState("")
+    const [skeleton , setSkeleton] = useState(false)
+
 
 
     const updateItem = async (id, dataId) =>{
@@ -39,7 +41,10 @@ function Home(){
           try {
             const api = `https://mern-task-master.onrender.com`;
             const Tasks = await axios.get(api);
+            Tasks.data &&
+            setTimeout(()=> setSkeleton(true), 2000)
             setAllTasks(Tasks.data);
+            
           } catch (err) {
             console.log(err);
           }
@@ -50,8 +55,9 @@ function Home(){
     return(
        <div>
          <TaskBar />
-        <Introduction  allTasks={allTasks} setAllTasks={setAllTasks} />
+        <Introduction  allTasks={allTasks} setAllTasks={setAllTasks} skeleton={skeleton} />
         <TaskSection
+        skeleton={skeleton}
          onDelete={deleteItem} 
          allTasks={allTasks} 
          setAllTasks={setAllTasks}

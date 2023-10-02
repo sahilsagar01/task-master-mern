@@ -10,7 +10,7 @@ function TaskBar() {
       {['md'].map((expand) => (
         <Navbar key={expand} bg='primary' expand={expand} className="bg-body-tertiary mb-3">
           <Container fluid>
-            <Navbar.Brand href="#">Task Master</Navbar.Brand>
+            <Navbar.Brand href="#" className='nav_brand'>Task Master</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -30,13 +30,13 @@ function TaskBar() {
                     title="other apps"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="http://3.26.208.5:3000/">ToDoList</NavDropdown.Item>
-                    <NavDropdown.Item href="http://3.26.208.5:3003">
-                      Weather app
+                    <NavDropdown.Item href="https://react-todolist-app-client.onrender.com">ToDoList</NavDropdown.Item>
+                    <NavDropdown.Item href="https://news-app-client.onrender.com">
+                      Daily News
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="http://3.26.208.5:3001">
-                      Something else here
+                    <NavDropdown.Item href="https://react-user-management.onrender.com">
+                    User management
                     </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
